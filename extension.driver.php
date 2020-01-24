@@ -104,7 +104,9 @@ Class extension_Content_Type_Mappings extends Extension {
 
         // HEader
         $header = new XMLElement('header');
-        $header->setValue(__($title));
+        $title_tag = new XMLElement('h4');
+        $title_tag->setValue(__($title));
+        $header->appendChild($title_tag);
 
         // Content
         $content = new XMLElement('div', null, array('class' => 'content'));
